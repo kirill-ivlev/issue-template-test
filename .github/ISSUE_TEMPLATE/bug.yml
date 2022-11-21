@@ -7,6 +7,14 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+  - type: markdown
+    attributes:
+      value: |
+        ## Having issue with YAML?
+        Please log an issue at [Azure-Pipelines-YAML](https://github.com/Microsoft/azure-pipelines-yaml). Over there we discuss YAML templates, samples for Azure Pipelines, and designs for upcoming YAML features. Also a place for the community to share best practices, ideas, and so on. File suggestions and issues here if they're specific to YAML pipelines.
+
+        ## Having issue with Tasks?
+        Log an issue at [Azure-Pipelines-Tasks](https://github.com/Microsoft/azure-pipelines-tasks). It contains all of the in-box tasks we ship with Azure-Pipelines/VSTS/TFS. If you're having issues with tasks in Build/Release jobs (e.g. unreasonable task failure) please log an issue there.
   - type: textarea
     id: what-happened
     attributes:
@@ -19,8 +27,8 @@ body:
     id: versions
     attributes:
       label: Versions
-      description: Specify the agent version 
-      placeholder: Azure DevOps version 2.100.1
+      description: Specify the agent version and operation system version
+      placeholder: Azure DevOps version 2.100.1 / Windows 10
     validations:
       required: true
   - type: dropdown
@@ -28,10 +36,24 @@ body:
     attributes:
       multiple: false
       label: Environment type
+      required: true
       options:
         - Self-Hosted
         - Microsoft Hosted
         - VMSS Pool
+  - type: dropdown
+    id: azure-devops-type
+    attributes:
+      name: Azure DevOps Server type
+      required: true
+      options:
+        - dev.azure.com (formerly visualstudio.com)
+        - Azure DevOps Server (Please specify exact version in the textbox below)
+  - type: input
+    id: azure-devops-server-datails
+    attributes:
+      name: Azure DevOps Server Version (if applicable)
+      placeholder: 2019.1
   - type: textarea
     id: logs
     attributes:
@@ -39,11 +61,3 @@ body:
       description: |
         Please copy and paste any relevant log output. You can find it in the _diag folder or on the pipelines logs on ADO side
       render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
