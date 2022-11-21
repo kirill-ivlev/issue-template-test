@@ -29,9 +29,9 @@ body:
       multiple: false
       label: Environment type
       options:
-        Self-Hosted
-        Microsoft Hosted
-        VMSS Pool
+        - Self-Hosted
+        - Microsoft Hosted
+        - VMSS Pool
   - type: textarea
     id: logs
     attributes:
