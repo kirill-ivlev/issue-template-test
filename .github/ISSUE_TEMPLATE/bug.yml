@@ -1,7 +1,7 @@
 name: Bug
 description: File a bug report
 title: "[BUG]: "
-labels: ["Type: Bug", "Status: Triage"]
+labels: ["bug", "triage"]
 body:
   - type: markdown
     attributes:
@@ -19,17 +19,25 @@ body:
     id: versions
     attributes:
       label: Versions
-      description: What versions of the relevant software are you running?
-      placeholder: Octokit.js v2.0.10, Node v16.18.0
+      description: Specify the agent version 
+      placeholder: Azure DevOps version 2.100.1
     validations:
       required: true
+  - type: dropdown
+    id: environment-type
+    attributes:
+      multiple: false
+      label: Environment type
+      options:
+        Self-Hosted
+        Microsoft Hosted
+        VMSS Pool
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: |
-        Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-        Please check your logs before submission to ensure sensitive information is redacted.
+        Please copy and paste any relevant log output. You can find it in the _diag folder or on the pipelines logs on ADO side
       render: shell
   - type: checkboxes
     id: terms
