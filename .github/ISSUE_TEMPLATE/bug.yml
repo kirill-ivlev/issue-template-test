@@ -34,9 +34,7 @@ body:
   - type: checkboxes
     id: environment-type
     attributes:
-      multiple: false
       label: Environment type
-      required: true
       options:
         - label: Self-Hosted
         - label: Microsoft Hosted
