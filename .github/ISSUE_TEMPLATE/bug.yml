@@ -43,7 +43,8 @@ body:
   - type: dropdown
     id: azure-devops-type
     attributes:
-      name: Azure DevOps Server type
+      name: azure-devops-server-type
+      label: Azure DevOps Server type
       required: true
       options:
         - dev.azure.com (formerly visualstudio.com)
