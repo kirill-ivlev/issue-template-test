@@ -47,7 +47,7 @@ body:
       options:
         - dev.azure.com (formerly visualstudio.com)
         - Azure DevOps Server (Please specify exact version in the textbox below)
-    validation:
+    validations:
       required: true
   - type: input
     id: azure-devops-server-datails
