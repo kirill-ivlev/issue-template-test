@@ -34,7 +34,7 @@ body:
   - type: checkboxes
     id: environment-type
     attributes:
-      label: Environment type
+      label: Environment type (Please select at least one enviroment where you face this issue)
       options:
         - label: Self-Hosted
         - label: Microsoft Hosted
@@ -47,6 +47,8 @@ body:
       options:
         - dev.azure.com (formerly visualstudio.com)
         - Azure DevOps Server (Please specify exact version in the textbox below)
+    validation:
+      required: true
   - type: input
     id: azure-devops-server-datails
     attributes:
