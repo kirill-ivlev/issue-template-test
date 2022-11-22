@@ -47,13 +47,11 @@ body:
       options:
         - dev.azure.com (formerly visualstudio.com)
         - Azure DevOps Server (Please specify exact version in the textbox below)
-      validation:
-        required: true
   - type: input
     id: azure-devops-server-datails
     attributes:
       label: Azure DevOps Server Version (if applicable)
-      placeholder: 2019.1
+      placeholder: Azure DevOps Server 2019.1
   - type: textarea
     id: logs
     attributes:
