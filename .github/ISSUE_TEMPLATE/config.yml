@@ -1,5 +1,1 @@
 blank_issues_enabled: true
-contact_links:
-  - name: Security issue
-    url:  https://github.com/microsoft/azure-pipelines-agent/security/policy
-    about: Please check this article if you'd like to report the security issue
