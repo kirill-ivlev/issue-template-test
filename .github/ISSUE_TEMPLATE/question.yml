@@ -49,6 +49,10 @@ body:
     validations:
       required: true
   - type: input
+    id: version-control-type
+    attributes:
+      label: Version controll system
+  - type: input
     id: azure-devops-server-datails
     attributes:
       label: Azure DevOps Server Version (if applicable)
