@@ -55,6 +55,11 @@ body:
       label: Azure DevOps Server Version (if applicable)
       placeholder: Azure DevOps Server 2019.1
   - type: input
+    id: operation-system
+    attributes:
+      label: Operation system
+      placeholder: Windows 11, Ubuntu 20.04...
+  - type: input
     id: version-control-type
     attributes:
       label: Version controll system

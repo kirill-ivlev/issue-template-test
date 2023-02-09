@@ -49,6 +49,11 @@ body:
     validations:
       required: true
   - type: input
+    id: operation-system
+    attributes:
+      label: Operation system
+      placeholder: Windows 11, Ubuntu 20.04...
+  - type: input
     id: version-control-type
     attributes:
       label: Version controll system
